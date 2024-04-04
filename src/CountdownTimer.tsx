@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Countdown from 'react-countdown';
 import {CountdownTimeDelta} from "react-countdown/dist/utils";
+import './CountdownTimer.css';
 
 interface CountdownTimerProps {
     targetDate: Date | null;
@@ -31,8 +32,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, startDate }
 
     return (
         <div>
-            {startDate && <p>Start Date: {startDate.toLocaleDateString()}</p>}
-            {targetDate && <Countdown date={targetDate} renderer={renderer} />} {/* Conditional Rendering */}
+            {startDate && <p>Bench Start: {startDate.toLocaleDateString()}</p>}
+            Bench End: {targetDate && <Countdown date={targetDate} renderer={renderer} />}
         </div>
     );
 };
