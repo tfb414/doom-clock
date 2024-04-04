@@ -24,6 +24,12 @@ const App = () => {
         setTargetDate(newTargetDate);
     };
 
+    // Create 3 boxes so that the date picker follows the same style
+    // create the hud at the bottom with the stuff from the input
+    // Programatically change the face with how much bentime you have left
+
+
+
     return (
       <body>
         <div className="image-container">
@@ -31,7 +37,7 @@ const App = () => {
           <div className="countdown-container">
             <h1>Doom Clock</h1>
             <p>Your countdown begins</p>
-            <input type="date" onChange={handleDateChange} />
+            <input type="date" className="doom-input" onChange={handleDateChange} />
             {selectedDate && (
               <CountdownTimer
                 targetDate={targetDate}

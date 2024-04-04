@@ -36,3 +36,13 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
+
+.doom-input {
+  border: 3px solid #595959;
+  background-color: black;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  font-family: 'doomFont';
+}
