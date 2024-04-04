@@ -1,13 +1,12 @@
 @font-face {
-  font-family: 'doomFont';
-  src: url('../fonts/doom/DooM.ttf') format('truetype');
+  font-family: "doomFont";
+  src: url("../fonts/doom/DooM.ttf") format("truetype");
 }
 
 body {
-
-  font-family: 'doomFont', sans-serif;
+  font-family: "doomFont", sans-serif;
   color: red;
-  background-image: url('../public/doomBricks.png');
+  background-image: url("../public/doomBricks.png");
   background-repeat: repeat;
   text-align: center;
 }
@@ -33,7 +32,6 @@ body {
   left: 50%;
   transform: translateY(-50%); /* Fine-tune vertical centering */
   transform: translatex(-50%); /* Fine-tune vertical centering */
-
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;

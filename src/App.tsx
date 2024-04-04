@@ -25,17 +25,22 @@ const App = () => {
     };
 
     return (
-        <body>
+      <body>
         <div className="image-container">
-            <img src={"./DoomClockBg.jpg"} alt="howdy"/>
-        <div className="countdown-container">
+          <img src={"./DoomClockBg.jpg"} alt="howdy" />
+          <div className="countdown-container">
             <h1>Doom Clock</h1>
             <p>Your countdown begins</p>
             <input type="date" onChange={handleDateChange} />
-            {selectedDate && <CountdownTimer targetDate={targetDate} startDate={selectedDate} />}
+            {selectedDate && (
+              <CountdownTimer
+                targetDate={targetDate}
+                startDate={selectedDate}
+              />
+            )}
+          </div>
         </div>
-        </div>
-        </body>
+      </body>
     );
 };
 
