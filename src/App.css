@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "doomFont";
-  src: url("../fonts/doom/DooM.ttf") format("truetype");
+  font-family: 'doomFont';
+  src: url('../fonts/doom/DooM.ttf') format('truetype');
 }
 
 body {
-  font-family: "doomFont", sans-serif;
+  font-family: 'doomFont', sans-serif;
   color: red;
-  background-image: url("../public/doomBricks.png");
+  background-image: url('../public/doomBricks.png');
   background-repeat: repeat;
   text-align: center;
 }
@@ -30,8 +30,8 @@ body {
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translateY(-50%); /* Fine-tune vertical centering */
-  transform: translatex(-50%); /* Fine-tune vertical centering */
+  transform: translateY(-50%);
+  transform: translatex(-50%);
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
@@ -45,4 +45,17 @@ body {
   color: white;
   padding: 10px;
   font-family: 'doomFont';
+}
+
+
+.doom-bar {
+  background-image: url('../public/status_background.jpg');
+  background-repeat: repeat;
+  background-size: 7%;
+  color: red;
+  text-align: center; /* Center the text within the bar */
+  /*padding: 10px; !* Add some spacing between the text and the edges of the bar *!*/
+  position: fixed; /* Make the bar position fixed  */
+  bottom: 0;       /* Stick it to the bottom */
+  width: 100%;
 }

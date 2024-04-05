@@ -44,9 +44,9 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
 
   return (
     <div>
-      {startDate && <p>Bench Start: {startDate.toLocaleDateString()}</p>}
-      Bench End:{" "}
-      {targetDate && <Countdown date={targetDate} renderer={renderer} />}
+      <p>
+      Bench End:{" "} {targetDate && <Countdown date={targetDate} renderer={renderer} />}
+      </p>
     </div>
   );
 };

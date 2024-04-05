@@ -1,0 +1,58 @@
+
+
+.doom-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center; /* Horizontally center items */
+    margin: auto;
+    padding: 0;
+    height: 100px;
+    border: 5px solid white; /* Adjust border style, width, and color */
+}
+
+.doom-box {
+    /*background-color: gray; !* Adjust gray color as needed *!*/
+    color: white;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center;
+    flex: 1 0 auto;
+    border-right: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.doom-box:last-child {
+    border-right: none;
+}
+
+.doom-box span:nth-child(2) {
+    color: red;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.doom-box span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+.hud-label {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #000, #fff);
+    -webkit-background-clip: text;
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
