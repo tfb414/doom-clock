@@ -3,7 +3,7 @@ import CountdownTimer from "./CountdownTimer";
 import "./App.css";
 import DoomHud from "./DoomHud";
 import gameOver from './images/doom-bigupper-game-over.png';
-import doomLogo from './images/Doom_logo.webp'
+import doomLogo from './images/Doom_logo-min.png'
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
