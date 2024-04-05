@@ -47,9 +47,6 @@ const DoomHud = ({ secondsRemaining}: { secondsRemaining: number | null}) => {  
         <div className="doom-box doom-face">
             <DoomFace percentage={percentageOfTimeRemaining} />
         </div>
-        {/*<div className="doom-box">*/}
-        {/*    <span>test</span>*/}
-        {/*</div>*/}
     </div>
   );
 };

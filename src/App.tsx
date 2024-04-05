@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import CountdownTimer from "./CountdownTimer";
 import "./App.css";
 import DoomHud from "./DoomHud";
+import gameOver from './images/doom-bigupper-game-over.png';
+import doomLogo from './images/Doom_logo.webp'
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -10,8 +12,6 @@ const App = () => {
 
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-
-
 
     const selectedDateString = event.target.value;
 
@@ -31,18 +31,12 @@ const App = () => {
     setTimeLeftInSeconds(getSecondsLeftUntilFiring(newTargetDate));
   };
 
-
-  // Create 3 boxes so that the date picker follows the same style
-  // create the hud at the bottom with the stuff from the input
-  // Programatically change the face with how much bentime you have left
-
   return (
     <body>
       <div className="image-container">
-        <img src={"./DoomClockBg.jpg"} alt="howdy" />
+        <img src={doomLogo} className="logo" alt="doom logo" />
         <div className="countdown-container">
-          <h1>Doom Clock</h1>
-          <p>Your countdown begins</p>
+          <img src={gameOver} alt="game over" />
           <input
             type="date"
             className="doom-input"

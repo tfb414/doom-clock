@@ -12,29 +12,43 @@ body {
 }
 
 .image-container {
-  width: 57%;
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.image-container img {
-  width: 100%;
+.image-container .logo {
+  padding-top: 50px;
+  width: 70%;
   height: auto;
   object-fit: cover;
 }
 
 .countdown-container {
   position: absolute;
+  width: 50%;
   top: 35%;
   left: 50%;
   transform: translateY(-50%);
   transform: translatex(-50%);
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
+  min-width: 840px;
+  max-width: 1000px;
+  /*text-align: center;*/
+}
+
+.no-time {
+  width: 100%;
+}
+
+.countdown-container img{
+  margin: 10px;
+  width: 100%;
+}
+
+.countdown-container div img { /* Targets images within the countdown container */
+  height: 50px;
+  width: auto;  /* Maintain aspect ratio */
 }
 
 .doom-input {
