@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CountdownTimer from "./CountdownTimer";
 import "./App.css";
 import DoomHud from "./DoomHud";
-import gameOver from './images/doom-bigupper-game-over.png';
+import initialImage from './images/doom-bigupper-enter-your-bench-start-date.png';
 import doomLogo from './images/Doom_logo-min.png'
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
       <div className="image-container">
         <img src={doomLogo} className="logo" alt="doom logo" />
         <div className="countdown-container">
-          <img src={gameOver} alt="game over" />
+          <img src={initialImage} alt="game over" />
           <input
             type="date"
             className="doom-input"
