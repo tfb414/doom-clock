@@ -6,10 +6,11 @@ import mentalHealthImage from "./images/doom-bigupper-mental-health.png"
 import timeImage from "./images/doom-bigupper-time.png"
 import CharacterImage from "./CharacterImage";
 
-const DoomHud = ({ secondsRemaining}: { secondsRemaining: number | null}) => {  // Receive secondsRemaining prop
+const twelveWeeksInSeconds = 60 * 60 * 24 * 7 * 12;
+
+const DoomHud = ({ secondsRemaining = twelveWeeksInSeconds}: { secondsRemaining: number}) => {
   const time = 300;
 
-    // Retrieve or generate values, store in state
     const [pto, setPto] = useState(() => {
         const storedValue = sessionStorage.getItem('pto');
         return storedValue ? storedValue : generateRandomNumber(15, 120);
@@ -20,16 +21,17 @@ const DoomHud = ({ secondsRemaining}: { secondsRemaining: number | null}) => {  
         return storedValue ? storedValue : generateRandomNumber(15, 45);
     });
 
-    // Update local storage whenever the values change
     useEffect(() => {
         localStorage.setItem('pto', pto);
         localStorage.setItem('mentalHealth', mentalHealth);
     }, [pto, mentalHealth]);
 
-    const twelveWeeksInSeconds = 60 * 60 * 24 * 7 * 12;
-    const percentageOfTimeRemaining = (secondsRemaining
-        ? (secondsRemaining / twelveWeeksInSeconds) * 100
-        : 100).toFixed(0);
+
+
+
+    const getPercentageTimeLeft =  (secondsRemaining / twelveWeeksInSeconds) * 100
+
+    const percentageOfTimeRemaining = getPercentageTimeLeft > 100 ? '100' : getPercentageTimeLeft < 0 ? '0' : getPercentageTimeLeft.toFixed(0)
 
   return (
     <div className="doom-container">
@@ -54,11 +56,10 @@ const DoomHud = ({ secondsRemaining}: { secondsRemaining: number | null}) => {  
         <span></span>
         <span className={"hud-number"}>
           <CharacterImage character={percentageOfTimeRemaining[0]} />
-          <CharacterImage character={percentageOfTimeRemaining[1]} />
+            {percentageOfTimeRemaining[1] ? <CharacterImage character={percentageOfTimeRemaining[1]} /> : ''}
           {percentageOfTimeRemaining[2] ? <CharacterImage character={percentageOfTimeRemaining[2]} /> : ''}
           <CharacterImage character={"%"} />
         </span>{" "}
-        {/* Display time value here */}
         <img src={timeImage} className="hud-label" />
       </div>
       <div className="doom-box doom-face">
